@@ -107,4 +107,3 @@ Feel free to ⭐ this repo and drop your feedback or issues.
 
 ---
 
-Let me know if you'd like this to include setup for `.env` files, or deploy instructions for platforms like Streamlit Cloud or Render.
