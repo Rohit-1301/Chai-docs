@@ -1,8 +1,6 @@
-Absolutely! Here's a professional and well-structured `README.md` for your RAG project based on your description:
-
 ---
 
-```markdown
+```
 # 🚀 Chai-Docs RAG App
 
 A Retrieval-Augmented Generation (RAG) system built as part of the **Gen-AI Cohort** led by [Hitesh Choudhary](https://github.com/hiteshchoudhary) and [Piyush Garg](https://github.com/piyushgarg-dev). This project demonstrates how modern Gen-AI systems can leverage documentation and vector databases to produce accurate, context-aware answers.
