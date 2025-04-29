@@ -1,6 +1,6 @@
 ---
 
-```
+```markdown
 # 🚀 Chai-Docs RAG App
 
 A Retrieval-Augmented Generation (RAG) system built as part of the **Gen-AI Cohort** led by [Hitesh Choudhary](https://github.com/hiteshchoudhary) and [Piyush Garg](https://github.com/piyushgarg-dev). This project demonstrates how modern Gen-AI systems can leverage documentation and vector databases to produce accurate, context-aware answers.
@@ -30,7 +30,7 @@ This app answers user questions **based entirely on the Chai-Docs documentation*
 - **Streamlit**
 - **LangChain**
 - **Qdrant (via Docker)**
-- **Gemini 1.5 Pro API**
+- **Gemini 1.0 Pro API**
 
 ---
 
@@ -40,7 +40,7 @@ This app answers user questions **based entirely on the Chai-Docs documentation*
 2. **Embed & Store**: Content chunks are embedded and stored in Qdrant.
 3. **User Query**: A user inputs a question via the Streamlit UI.
 4. **Search & Retrieve**: The app embeds the question, retrieves the most relevant chunks from Qdrant.
-5. **Generate Answer**: Chosen chunks and the question are passed to Gemini 1.5 Pro to generate a response.
+5. **Generate Answer**: Chosen chunks and the question are passed to Gemini 1.0 Pro to generate a response.
 6. **Display**: The answer is displayed in the Streamlit interface.
 
 ---
@@ -86,8 +86,8 @@ streamlit run Chai_docs.py
 
 Huge thanks to:
 
-- [Hitesh Choudhary]
-- [Piyush Garg]
+- [Hitesh Choudhary](https://github.com/hiteshchoudhary)
+- [Piyush Garg](https://github.com/piyushgarg-dev)
 
 For leading the **Gen-AI Cohort** and providing this practical, hands-on learning journey.
 
@@ -103,3 +103,8 @@ Feel free to ⭐ this repo and drop your feedback or issues.
 ## 🏷️ Tags
 
 `#GenAI` `#LangChain` `#Streamlit` `#Qdrant` `#Gemini` `#RAG` `#AIProjects` `#ChaiDocs`
+```
+
+---
+
+Let me know if you'd like this to include setup for `.env` files, or deploy instructions for platforms like Streamlit Cloud or Render.
