@@ -1,6 +1,6 @@
 ---
 
-```markdown
+```
 # 🚀 Chai-Docs RAG App
 
 A Retrieval-Augmented Generation (RAG) system built as part of the **Gen-AI Cohort** led by [Hitesh Choudhary](https://github.com/hiteshchoudhary) and [Piyush Garg](https://github.com/piyushgarg-dev). This project demonstrates how modern Gen-AI systems can leverage documentation and vector databases to produce accurate, context-aware answers.
@@ -19,7 +19,7 @@ This app answers user questions **based entirely on the Chai-Docs documentation*
 - 🧠 **Smart Chunking** — Uses LangChain to break down content meaningfully
 - 🧭 **Semantic Search** — Embeds content and queries using vector similarity
 - 💾 **Qdrant Integration** — Stores and retrieves document chunks via Dockerized vector database
-- 🤖 **Gemini 1.0 Pro** — Generates responses based on matched content
+- 🤖 **Gemini 1.5 Pro** — Generates responses based on matched content
 - 💡 **Streamlit UI** — Clean, interactive frontend for user interaction
 
 ---
@@ -30,7 +30,7 @@ This app answers user questions **based entirely on the Chai-Docs documentation*
 - **Streamlit**
 - **LangChain**
 - **Qdrant (via Docker)**
-- **Gemini 1.0 Pro API**
+- **Gemini 1.5 Pro API**
 
 ---
 
@@ -58,7 +58,7 @@ This app answers user questions **based entirely on the Chai-Docs documentation*
 
 - Python 3.8+
 - Docker
-- OpenAI-compatible Gemini 1.0 Pro API Key
+- OpenAI-compatible Gemini 1.5 Pro API Key
 
 ### Installation
 
@@ -105,5 +105,4 @@ Feel free to ⭐ this repo and drop your feedback or issues.
 `#GenAI` `#LangChain` `#Streamlit` `#Qdrant` `#Gemini` `#RAG` `#AIProjects` `#ChaiDocs`
 ```
 
----
 
