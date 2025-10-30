@@ -11,9 +11,10 @@ import json
 load_dotenv()
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
+os.environ["GOOGLE_API_KEY"] = gemini_api_key
 
 # Initialize the LLM
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature=0)
 
 # Initialize embeddings
 embeddings = GoogleGenerativeAIEmbeddings(

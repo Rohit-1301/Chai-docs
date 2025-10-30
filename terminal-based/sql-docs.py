@@ -6,9 +6,12 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 import os
 import json
+from dotenv import load_dotenv
 
 # Set Google API key as environment variable
-os.environ["GOOGLE_API_KEY"] = ""
+load_dotenv()
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+os.environ["GOOGLE_API_KEY"] = gemini_api_key
 
 # Get URL from user input
 urls = [
@@ -18,7 +21,8 @@ urls = [
     "https://docs.chaicode.com/youtube/chai-aur-sql/normalization/",
     "https://docs.chaicode.com/youtube/chai-aur-sql/database-design-exercise/",
     "https://docs.chaicode.com/youtube/chai-aur-sql/joins-and-keys/",
-    "https://docs.chaicode.com/youtube/chai-aur-sql/joins-exercise/"
+    "https://docs.chaicode.com/youtube/chai-aur-sql/joins-exercise/",
+    "https://www.geeksforgeeks.org/software-testing/penetration-testing-software-engineering/"
 ]
 
 loader = WebBaseLoader(urls)
@@ -31,12 +35,13 @@ embeddings = GoogleGenerativeAIEmbeddings(
     model="models/text-embedding-004"
     )
 
-# vector_store = QdrantVectorStore.from_documents(
-#     documents=split_docs,
-#     url="http://localhost:6333",
-#     collection_name="sql-docs",
-#     embedding=embeddings
-# )
+# Create vector store (uncommented to create the collection)
+vector_store = QdrantVectorStore.from_documents(
+    documents=split_docs,
+    url="http://localhost:6333",
+    collection_name="sql-docs",
+    embedding=embeddings
+)
 
 print("Docs length",len(docs))
 print("Split docs length",len(split_docs))
@@ -49,7 +54,7 @@ retriever = QdrantVectorStore.from_existing_collection(
 )
 
 # Initialize the LLM
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature=0)
 
 system_prompt = """
 You are a knowledgeable SQL tutor.
